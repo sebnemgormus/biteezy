@@ -29,6 +29,7 @@ import facebook_icon from './facebook_icon.png'
 import linkedin_icon from './linkedin_icon.png'
 import twitter_icon from './twitter_icon.png'
 import logo_footer from './logo_footer.png'
+import cross_icon from './cross_icon.png'
 
 
 
@@ -44,7 +45,8 @@ export const assets = {
     facebook_icon,
     linkedin_icon,
     twitter_icon,
-    logo_footer
+    logo_footer,
+    cross_icon
 }
 
 export const menu_list = [
