@@ -1,0 +1,113 @@
+.list-table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 48px 2fr 1fr 1fr 32px;
+  align-items: center;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.list-table-format:hover {
+  background: #f9f9f9;
+}
+.list-table-format.title {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #ddd;
+}
+.list-table-format img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.cursor {
+  cursor: pointer;
+  font-size: 18px;
+  color: #e74c3c;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.cursor:hover {
+  color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .list-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .list-table-format {
+    display: grid;
+    grid-template-areas:
+      "image name action"
+      "image category action"
+      "image price action";
+    grid-template-columns: 48px 1fr 24px;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background: white;
+  }
+
+  .list-table-format img {
+    grid-area: image;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .list-table-format p:nth-child(2) {
+    grid-area: name;
+    font-weight: 600;
+  }
+
+  .list-table-format p:nth-child(3) {
+    grid-area: category;
+    font-size: 13px;
+    color: #666;
+  }
+
+  .list-table-format p:nth-child(4) {
+    grid-area: price;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .list-table-format p:nth-child(5) {
+    grid-area: action;
+    justify-self: end;
+    align-self: start;
+    font-size: 18px;
+    color: #e74c3c;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .list-table-format.title {
+    display: none;
+  }
+}
