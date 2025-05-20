@@ -30,6 +30,9 @@ import linkedin_icon from './linkedin_icon.png'
 import twitter_icon from './twitter_icon.png'
 import logo_footer from './logo_footer.png'
 import cross_icon from './cross_icon.png'
+import profile_icon from './profile_icon.png'
+import bag_icon from './bag_icon.png'
+import logout_icon from './logout_icon.png'
 
 
 
@@ -46,7 +49,10 @@ export const assets = {
     linkedin_icon,
     twitter_icon,
     logo_footer,
-    cross_icon
+    cross_icon,
+    profile_icon,
+    bag_icon,
+    logout_icon
 }
 
 export const menu_list = [

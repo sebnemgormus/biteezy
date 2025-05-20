@@ -5,6 +5,8 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
+  const url = import.meta.env.VITE_BASE_URL;
+  const [token, setToken] = useState("");
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -28,13 +30,23 @@ const StoreContextProvider = (props) => {
     }return totalAmount;
   };
 
+  //still login after reload page 
+  useEffect(()=>{
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"))
+    }
+  },[])
+
   const contextValue = {
     food_list,
     cartItems,
     setCartItems,
     addToCart,
     removeFromCart,
-    getTotalCartAmount
+    getTotalCartAmount,
+    url,
+    token,
+    setToken
   };
 
   return (
